@@ -9,7 +9,7 @@ import (
 )
 
 func SimpleRun(name string, arg ...string) error {
-	prefix := aurora.Bold(aurora.BrightGreen(`⌬`))
+	prefix := aurora.Bold(aurora.White(`⌬`))
 	fmt.Printf("%s %s %s\n", prefix, name, strings.Join(arg, " "))
 	command := exec.Command(name, arg...)
 	command.Stdin = os.Stdin
