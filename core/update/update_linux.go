@@ -6,7 +6,7 @@ func RunUpdate() error {
 	if err := helper.SimpleRun("sudo", "apt-get", "update", "-y"); err != nil {
 		return err
 	}
-	if err := helper.SimpleRun("sudo", "apt-get", "upgrade", "-y"); err != nil {
+	if err := helper.SimpleRun("sudo", "apt-get", "upgrade", "-y", "--with-new-pkgs"); err != nil {
 		return err
 	}
 	if err := helper.SimpleRun("sudo", "apt-get", "autoremove", "-y"); err != nil {
