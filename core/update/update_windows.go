@@ -1,7 +1,7 @@
 package update
 
-import "fmt"
+import "github.com/paul-nelson-baker/pauls-box/core/helper"
 
 func RunUpdate() error {
-	return fmt.Errorf("Not supported yet. Don't have a box to figure this out right now.")
+	return helper.SimpleRun("choco", "upgrade", "all")
 }
